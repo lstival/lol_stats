@@ -19,8 +19,8 @@ df_match = pd.DataFrame(columns=['team_red', 'result_red', 'ban_0_red', 'ban_1_r
                                 'csM_3_blue', 'dpM_3_blue', 'wpM_3_blue', 'player_4_blue', 'kda_4_blue', 'csM_4_blue', 'dpM_4_blue', 'wpM_4_blue', 'match_duration'])
 
 skiped_matchs = []
-
-pbar = tqdm(range(44693, 45200))
+# 44693
+pbar = tqdm(range(44431, 45200))
 for match_idx in pbar:
     pbar.set_description(f"Processing match: {match_idx}")
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36"}
@@ -232,4 +232,4 @@ print(f" Matchs not finded: {skiped_matchs}")
         
 
 # Save .csv with data of all match
-df_match.to_csv("data/matchs.csv")
+df_match.to_csv("data/matchs_2023.csv")
